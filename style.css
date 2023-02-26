@@ -1,0 +1,219 @@
+/* GLOBAL view aka DESKTOP view */
+
+/* CLASS PROJECT 5, my attempt */
+/* html {
+    background-color: #EBEBEB;
+} */
+
+body {
+    font-family:'Asap', sans-serif;
+    color: white;
+    background-color: #EBEBEB;
+}
+
+.container {
+    min-height: 500px;
+    /* set limit of 1024px or it will not respond */
+    max-width: 1024px;
+    /* for centering, 0 for top/bottom, auto for left/right */
+    margin: 0 auto;
+    /* flexbox will arrange boxes */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* put in a gap between the menu strip and box array */
+    /* a sum of min-height and margin-bottom from .header-container */
+    padding-top: 140px;
+}
+
+.header-container {
+    background-color: grey;
+    min-height: 100px;
+    /* no longer needed as 'padding-top' was applied to .container */
+    /* margin-bottom: 40px; */
+
+    /* menu strip remain fixed whilst box array slides underneath */
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    max-width: 1024px;
+    /* background-color: hotpink; */
+    min-height: 100px;
+    /* centres box */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* can be used to turn off individual boxes in desktop view */
+.hide-desktop-only {
+    display: none;
+}
+
+.col {
+    /* using percentages makes the width respond dynamically to resizing too (instead of using 'max-width' */
+    width: 30%;
+    margin-bottom: 40px;
+    background-color: rgb(94, 181, 94);
+    
+}
+
+.col p {
+    color: white;
+    font-size: 0.875rem;
+    padding: 20px 25px;
+    /* this value should be slightly higher than font-size */
+    line-height: 1.25rem;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+}
+
+/* Targets first line of text below image, only in col */
+.col p::first-line {
+    font-weight: 700;
+}
+
+/* 'burgermenu' will be switched off in GLOBAL/DESKTOP view */
+.mob-wrapper {
+    display: none;
+}
+
+
+/* media query dynamically responds to resizing of screen... */
+/* ...this is TABLET VIEW... */
+
+@media(max-width:768px) {
+    .col {
+        width: 45%;
+    }
+/* in tablet view specific box will be displayed */
+/* this will cascade to mobile view */
+    .hide-desktop-only {
+    display: block;
+}
+ 
+/* as view reduces, boxes will cascade smoothly here (this was originally inside the MOBILE view but boxes broke in/neat tablet view */
+
+    /* overrides conditions from above header tag so that items in top menu strip stack on top of each other in mobile view */
+
+
+/* position is relative to box array */
+.header-container {  
+    position: relative;
+}
+
+.container {
+    padding-top: 40px;
+}
+
+/* buttons dissapear in tablet view */
+nav {
+    display: none;
+}
+
+ /* a tags inside nav also stack */
+nav a {
+    display: block;
+}
+
+.logo {
+    padding: 40px 0;
+}
+
+/* centers nav buttons */
+.mybutton {
+    margin-left: 0;
+}
+
+/* burgermenu displays for TABLET and MOBILE views */
+.mob-wrapper {
+    display: block;
+    /* pushes burger menu away from the edge */
+    padding-right: 30px;
+}
+
+.mob-nav {
+    display: none;
+    /* 'burgermenu icon will not move */
+    position: absolute;
+    /* a small gap between icon and dropdown  */
+    padding-top: 10px;
+}
+
+.navbutton {
+    display: block;
+    background-color: coral;
+    padding: 15px 30px;
+    /* moves menu buttons away from right edge */
+    margin-left: -70px;
+    text-align: center;
+}
+
+}
+
+
+
+/* ...this is MOBILE view */
+/*  */
+/*  */
+/*  */
+
+@media(max-width:400px) {
+   .col {
+        width: 100%;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+}
+/*  */
+/*  */
+/*  */
+/* end of MOBILE VIEW */
+
+
+
+/* lesson 90, class project 5, my attempt */
+/* this specifically targets class 'bold' inside 'span'... */
+/* span.bold {
+    font-weight: bold;
+} */
+
+/* ...or can be left as just a call to the class of bold (renamed 'highlight' by Dan so other attributes can be applied */
+
+.highlight {
+    font-weight: 700;
+    /* color: mediumslateblue;
+    font-size: 20px; */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CLASS PROJECT 5 my attempt */
+/* .navbutton {
+    border: 1px solid white;
+    padding: 10px 20px;
+    display: inline;
+    margin-left: 20px;    
+} */
+
+/* CLASS PROJECT 5, Dan's way */
+
+.mybutton {
+    padding: 10px 25px;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 20px;
+}
+

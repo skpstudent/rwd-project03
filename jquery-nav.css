@@ -1,0 +1,5 @@
+/* Jquery function 'toggle' will switch between display none and diplaty block  */
+
+.mobile-nav {
+    display: none;
+}

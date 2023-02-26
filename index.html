@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Course - Project 3</title>
+
+    <!-- the order is important as it will load styles from 'css-reset' first -->
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- 'Asap' Google Font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- strip along the top containing menu bar -->
+    <div class="header-container">
+
+        <header>
+            <div class="logo">
+                <!-- NOTE, this could be done with p or h tags but this break the content, because these are BLOCK level tags and a search engine will view it as separate content and not one whole -->
+
+                <!-- SPAN is an INLINE tag element so the content is viewed as one whole -->
+
+                <span class="highlight">DANIEL WALTER SCOTT</span>
+                - LOGO DESIGN
+            </div>
+
+            <!-- above can also be INLINE CSS as shown... -->
+            <!-- <div class="logo">
+                <span style="font-weight: 700;">DANIEL WALTER SCOTT</span>
+                - LOGO DESIGN
+            </div> -->
+            <!-- ...but can be inefficient as more attributes are added -->
+
+            <!-- CLASS PROJECT 5 my attempt -->
+            <!-- <nav>
+                <div class="navbutton">
+                    <a href="#">ABOUT</a>
+                </div>
+
+                <div class="navbutton">
+                    <a href="#">PRICING</a>
+                </div>
+
+                <div class="navbutton">
+                    <a href="#">CONTACT</a>
+                </div>
+            </nav> -->
+
+            <!-- CLASS PROJECT 5, Dan's way -->
+            <nav>
+                <a href="#" class="mybutton">ABOUT</a>
+                <a href="#" class="mybutton">PRICING</a>
+                <a href="#" class="mybutton">CONTACT</a>
+            </nav>
+
+
+            <div class="mob-wrapper">
+                <!-- SVG files contain web enabled code, so attributes such as color can be changed by mofiying the file in VSCode -->
+                <img src="images/icon-burger-menu.svg" alt="Mobile Menu Icon" style="width: 40px;" class="burgermenu">
+
+
+                <div class="mob-nav">
+                    <a href="#" class="navbutton">ABOUT</a>
+                    <a href="#" class="navbutton">PRICING</a>
+                    <a href="#" class="navbutton">CONTACT</a>
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+    </div>
+
+
+
+    <div class="container">
+
+        <div class="col">
+            <img src="images/image1@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col">
+            <img src="images/image2@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col">
+            <img src="images/image3@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col">
+            <img src="images/image4@2x.png" alt="">
+            <p>Does not matter what you type, <span class="highlight">the first line</span> is always dispayed in bold
+            </p>
+        </div>
+        <div class="col hide-mobile">
+            <img src="images/image5@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col hide-mobile">
+            <img src="images/image6@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col hide-mobile">
+            <img src="images/image7@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col hide-mobile">
+            <img src="images/image8@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col hide-mobile">
+            <img src="images/image9@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col hide-desktop-only">
+            <img src="images/image10@2x.png" alt="">
+            <p>Branding: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+
+    </div>
+
+    <!-- JQUERY library call -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- link to our javascript file -->
+    <script src="scripts.js"></script>
+
+
+
+</body>
+
+</html>
